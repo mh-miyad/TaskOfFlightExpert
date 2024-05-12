@@ -4,7 +4,7 @@ const TabComp = () => {
   const [isActive, setIsActive] = useState("one-way");
   return (
     <>
-      <div className="flex justify-center ">
+      <div className=" flex justify-center">
         <div className="my-8 flex gap-2 rounded-sm border border-[#2E3791]">
           <button
             className={`w-28 py-1 font-medium  ${isActive == "round-trip" ? "bg-[#2E3791] text-white" : ""} `}
@@ -26,7 +26,7 @@ const TabComp = () => {
           </button>
         </div>
       </div>
-      <hr className="h-0.5 bg-blue-300" />
+      <hr className="mx-5 h-0.5 bg-blue-300" />
     </>
   );
 };

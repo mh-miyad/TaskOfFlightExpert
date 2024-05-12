@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
-
+import demo from "../../Data/Demo.json";
+import { flightStore } from "../../Zustand/Store";
 const SearchComp = () => {
+  const { setFlights } = flightStore();
   const {
     register,
     handleSubmit,
@@ -9,9 +11,13 @@ const SearchComp = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    if (data) {
+      setFlights(demo);
+    }
+  };
   return (
-    <div className="mt-2">
+    <div className="mx-5 mt-2">
       <form onSubmit={handleSubmit(onSubmit)} className=" ">
         {/* register your input into the hook by invoking the "register" function */}
         <div className="flex flex-wrap items-center gap-2">
@@ -53,7 +59,40 @@ const SearchComp = () => {
           </select>
           <p>+</p>
         </div>
-        <hr className="mt-3 h-0.5 bg-blue-300" />
+        <hr className="mb-4 mt-5  h-0.5 bg-blue-300" />
+        <div className="my-2 flex flex-wrap items-center justify-between gap-5">
+          <div className="mx-auto w-1/2 sm:mx-0 sm:w-fit">
+            <label htmlFor="extra-option" className="flex items-center gap-2 ">
+              <input
+                type="checkbox"
+                name="extra-option"
+                id="extra-option"
+                className="form-checkbox"
+              />
+              <span className="ml-2 text-xl ">Extra Option</span>
+            </label>
+          </div>
+          <div className="flex items-center gap-4">
+            <h2 className="text-xl"> Environment</h2>
+            <label htmlFor="dummy" className="flex items-center gap-2">
+              <input type="radio" name="dummy" id="dummy" checked />
+              <span className="mr-2 text-xl">Dummy</span>
+            </label>
+            <label htmlFor="PDT" className="flex items-center gap-2">
+              <input type="radio" name="dummy" id="dummy" />
+              <span className="mr-2 text-xl">PDT</span>
+            </label>
+          </div>
+          <div className="mx-auto  w-1/2 sm:mx-0 sm:w-fit">
+            <button
+              className="rounded-md bg-[#2E3791] px-5 py-2 capitalize text-white drop-shadow-sm"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <hr className="mt-5 h-0.5 bg-blue-300" />
       </form>
     </div>
   );
