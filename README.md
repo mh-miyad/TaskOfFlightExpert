@@ -3,6 +3,10 @@
 
  Flight Experts is a flight search system inspired by industry leaders like Go Zayan and Flight Expert. This project was developed following specific instructions and offers a unique approach to flight search functionality.
 
+# Screenshots
+
+![App Screenshot](https://i.ibb.co/TYN8QVh/ioio.png)
+
 # Getting Started:**
 ### Run Locally
 
@@ -33,6 +37,5 @@ Start the server
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** React, Tailwindcss, flowbite-react , Zustand , etc ...**
 
-**Server:** Node, Express
