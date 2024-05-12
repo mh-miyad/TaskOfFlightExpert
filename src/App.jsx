@@ -1,8 +1,12 @@
 import NavComp from "./Components/NavCom/NavComp";
 import SearchComp from "./Components/Search/SearchComp";
 import TabComp from "./Components/TabButton/TabComp";
+import TableComp from "./Components/Table/TableComp";
+import useFlightStore from "./Zustand/Store";
 
 const App = () => {
+  const { status } = useFlightStore();
+
   return (
     <div>
       {/* Use Here navbar component */}
@@ -24,6 +28,19 @@ const App = () => {
             {/*  here Start here Search Item  */}
             <SearchComp />
             {/*  here Start here Search Item  */}
+            {/* Data show in Table format */}
+            <div>
+              {status ? (
+                <>
+                  {" "}
+                  <TableComp />
+                </>
+              ) : (
+                <> </>
+              )}
+            </div>
+
+            {/* Data show in Table format */}
           </div>
         </div>
         {/* Heading part  */}

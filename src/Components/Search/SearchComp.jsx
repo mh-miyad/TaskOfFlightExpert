@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import demo from "../../Data/Demo.json";
-import { flightStore } from "../../Zustand/Store";
+import useFlightStore from "../../Zustand/Store";
+
 const SearchComp = () => {
-  const { setFlights } = flightStore();
+  const { setStatus } = useFlightStore();
   const {
     register,
     handleSubmit,
@@ -13,7 +13,7 @@ const SearchComp = () => {
 
   const onSubmit = (data) => {
     if (data) {
-      setFlights(demo);
+      setStatus(true);
     }
   };
   return (
