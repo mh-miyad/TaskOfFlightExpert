@@ -6,7 +6,7 @@ const NavComp = () => {
   const handleClose = () => setIsOpen(false);
   return (
     <>
-      <nav className="bg-slate-800 p-6 text-white">
+      <nav className="bg-[#1F2937] p-6 text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between ">
           {/* here nav link  */}
           <div className="block lg:hidden">
