@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const TabComp = () => {
-  const [isActive, setIsActive] = useState("round-trip");
+  const [isActive, setIsActive] = useState("one-way");
   return (
     <>
       <div className="flex justify-center ">
