@@ -11,3 +11,7 @@ const useFlightStore = create((set) => ({
   setFlights: (flights) => set({ flights }), // Update flights directly
 }));
 export default useFlightStore
+
+
+
+

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Avatar, Drawer } from "flowbite-react";
 import { HiBars3, HiOutlineBell } from "react-icons/hi2";
+import img from "../../assets/avatar.jpg";
 const NavComp = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => setIsOpen(false);
@@ -28,8 +29,8 @@ const NavComp = () => {
           {/* here nav link  */}
           {/* Here Avatar and Notify icon  */}
           <div className="flex items-center gap-3">
-            <HiOutlineBell size={30} />
-            <Avatar rounded alt="Avatar" />
+            <HiOutlineBell size={30} imageRendering={"auto"} />
+            <Avatar rounded alt="Avatar" img={img} bordered />
             <button onClick={() => setIsOpen(true)} className="block lg:hidden">
               <HiBars3 size={30} />
             </button>
